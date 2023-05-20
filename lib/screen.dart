@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  // All journals
+  // Todos los productos
   List<Map<String, dynamic>> inventariado = [];
 
   bool _isLoading = true;

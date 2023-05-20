@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/screen.dart';
 
 class MyDelegateSearch extends SearchDelegate {
   List<Map<String, dynamic>> inventariado = [];
@@ -44,8 +43,11 @@ class MyDelegateSearch extends SearchDelegate {
       itemCount: matchQuery.length,
       itemBuilder: (context, index) {
         var result = matchQuery[index];
+        String producto = result['producto'] as String;
+        String descripcion = result['descripcion'] as String;
+        String titleText = '$producto($descripcion)';
         return ListTile(
-          title: Text(result['producto'] as String),
+          title: Text(titleText),
           trailing: const SizedBox(
             width: 100,
           ),
@@ -74,8 +76,11 @@ class MyDelegateSearch extends SearchDelegate {
       itemCount: matchQuery.length,
       itemBuilder: (context, index) {
         var result = matchQuery[index];
+        String producto = result['producto'] as String;
+        String descripcion = result['descripcion'] as String;
+        String titleText = '$producto($descripcion)';
         return ListTile(
-          title: Text(result['producto'] as String),
+          title: Text(titleText),
           trailing: const SizedBox(
             width: 100,
           ),
